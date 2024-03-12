@@ -1,0 +1,49 @@
+unit relatorioFrm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, MemDS, DBAccess, IBC, QuickRpt, ExtCtrls, QRCtrls;
+
+type
+  TfrmRelatorio = class(TForm)
+    pnlRelatorio: TPanel;
+    pnlFiltro: TPanel;
+    qrpRelatorio: TQuickRep;
+    srcRelatorio: TIBCDataSource;
+    qryRelatorio: TIBCQuery;
+    QRGroup1: TQRGroup;
+    QRChildBand1: TQRChildBand;
+    QRDBText1: TQRDBText;
+   
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelatorio: TfrmRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  agendaFrm;
+
+
+enprocedure TfrmRelatorio.FormCreate(Sender: TObject);
+begin
+
+procedure TfrmRelatorio.FormCloseQuery(Sender: TObject;
+  var CanClose: Boolean);
+begin
+
+end;
+
+end;
+
+d.

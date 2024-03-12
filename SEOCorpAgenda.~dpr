@@ -1,0 +1,18 @@
+program SEOCorpAgenda;
+
+uses
+  Forms,
+  AgendaFrm in 'AgendaFrm.pas' {frmAgenda},
+  uRestoreBackup in 'uRestoreBackup.pas',
+  BackupModal in 'BackupModal.pas' {mdlBackup},
+  RestoreModal in 'RestoreModal.pas' {mdlRestore};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmAgenda, frmAgenda);
+  Application.CreateForm(TmdlBackup, mdlBackup);
+  Application.CreateForm(TmdlRestore, mdlRestore);
+  Application.Run;
+end.
